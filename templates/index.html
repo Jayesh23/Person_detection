@@ -1,0 +1,46 @@
+<!-- CREATE A FOLDER 'TEMPLATES' AND ADD THIS FILE THERE. -->
+<!doctype html>
+<html lang=”en”>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+</head>
+<body>
+      <style>
+        body { margin: 0px; background-color: #000; color: #fff; overflow: hidden;}
+        canvas { width: 100%; position: absolute; top: 0; }
+        img { 
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .earth {
+            position: absolute;
+            left:0;top:0;
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            pointer-events:none;
+            z-index:2;
+        }
+    </style>
+    <!-- <video id="video" autoplay muted="muted"></video> -->
+    <img id="bg" src="{{ url_for('video_feed') }}">
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/mathjs/2.4.0/math.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r72/three.min.js"></script>
+    <script src="{{ url_for('static', filename='earth.js') }}"></script>
+    <script src="{{ url_for('static', filename='moon.js') }}"></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+    <!-- <script src="/home/hillorids/ProjectEarth/prefinal/earth.js"></script>
+    <script src="/home/hillorids/ProjectEarth/prefinal/moon.js"></script>
+    <script src="/home/hillorids/ProjectEarth/prefinal/main.js"></script> -->
+    <!-- <script src="/home/hillorids/ProjectEarth/prefinal/templates/earth.js"></script>
+    <script src="/home/hillorids/ProjectEarth/prefinal/templates/moon.js"></script>
+    <script src="/home/hillorids/ProjectEarth/prefinal/templates/main.js"></script> -->
+</body>
+</html>
